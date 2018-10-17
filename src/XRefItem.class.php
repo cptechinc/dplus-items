@@ -1,13 +1,13 @@
 <?php
-    use Dplus\ProcessWire\DplusWire as DplusWire;
+    use Dplus\ProcessWire\DplusWire;
     
 	/**
 	 * Class for Items that reside in the itemsearch table
 	 */
     class XRefItem {
-        use Dplus\Base\CreateFromObjectArrayTraits;
-		use Dplus\Base\CreateClassArrayTraits;
-		use Dplus\Base\ThrowErrorTrait;
+        use \Dplus\Base\CreateFromObjectArrayTraits;
+		use \Dplus\Base\CreateClassArrayTraits;
+		use \Dplus\Base\ThrowErrorTrait;
 
 		/**
 		 * Part or Item (ID or #)
