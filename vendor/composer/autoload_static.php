@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit75e338935a35fd4eb607c6562ccd82cb
 {
     public static $classMap = array (
+        'ItemMasterItem' => __DIR__ . '/../..' . '/src/ItemMasterItem.class.php',
         'PricingItem' => __DIR__ . '/../..' . '/src/PricingItem.class.php',
         'XRefItem' => __DIR__ . '/../..' . '/src/XRefItem.class.php',
     );

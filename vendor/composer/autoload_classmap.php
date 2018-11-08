@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ItemMasterItem' => $baseDir . '/src/ItemMasterItem.class.php',
     'PricingItem' => $baseDir . '/src/PricingItem.class.php',
     'XRefItem' => $baseDir . '/src/XRefItem.class.php',
 );
