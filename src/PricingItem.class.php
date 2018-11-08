@@ -4,7 +4,7 @@
 	/**
 	 * Class for Items from the Pricing table
 	 */
-	class PricingItem {
+	class PricingItem extends ModelClass {
 		use \Dplus\Base\ThrowErrorTrait;
 		use \Dplus\Base\MagicMethodTraits;
 		use \Dplus\Base\CreateFromObjectArrayTraits;

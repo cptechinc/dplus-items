@@ -4,7 +4,7 @@
 	/**
 	 * Class for Items that reside in the itemsearch table
 	 */
-    class XRefItem {
+    class XRefItem extends ModelClass{
         use \Dplus\Base\CreateFromObjectArrayTraits;
 		use \Dplus\Base\CreateClassArrayTraits;
 		use \Dplus\Base\ThrowErrorTrait;
