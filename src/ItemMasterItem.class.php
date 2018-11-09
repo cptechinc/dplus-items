@@ -2,6 +2,9 @@
 	use ProcessWire\Page;
 	use Dplus\ProcessWire\DplusWire;
 	
+	/**
+	 * Class for dealing with Item Master Products / Items
+	 */
 	class ItemMasterItem extends ModelClass {
 		use \Dplus\Base\ThrowErrorTrait;
 		use \Dplus\Base\MagicMethodTraits;
