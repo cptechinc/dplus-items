@@ -131,8 +131,8 @@
 		 * @param  bool   $debug Run in debug? If so, will return SQL Query
 		 * @return int           Total Available
 		 */
-		public function count_totalavailable($debug = false) {
-			return count_totalitemavailablity($this->sessionid, $this->itemid, $debug);
+		public function get_totalavailable($debug = false) {
+			return get_totalitemavailablity($this->sessionid, $this->itemid, $debug);
 		}
 
 		/**
