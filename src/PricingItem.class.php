@@ -4,7 +4,7 @@
 	/**
 	 * Class for Items from the Pricing table
 	 */
-	class PricingItem extends ModelClass {
+	class PricingItem {
 		use \Dplus\Base\ThrowErrorTrait;
 		use \Dplus\Base\MagicMethodTraits;
 		use \Dplus\Base\CreateFromObjectArrayTraits;
@@ -112,8 +112,7 @@
 		============================================================ */
 		/**
 		 * Checks if there's sales history for the Pricing Item from the database
-		 * @param  bool $debug if true it will return the SQL statement used,
-		 * if not it will return the result from the query execution
+		 * @param  bool $debug Run in debug? If so, will return SQL Query
 		 */
 		public function has_saleshistory($debug = false) {
 			return count_itemhistory($this->sessionid, $this->itemid, $debug);
@@ -121,11 +120,19 @@
 
 		/**
 		* Returns an array of item availability records
-		* @param  bool $debug if true it will return the SQL statement used,
-		* if not it will return the result from the query execution
+		* @param  bool $debug Run in debug? If so, will return SQL Query
 		*/
 		public function get_availability($debug = false) {
 			return get_itemavailability($this->sessionid, $this->itemid, $debug);
+		}
+		
+		/**
+		 * Returns the Total Availabilty sum of all the warehouses
+		 * @param  bool   $debug Run in debug? If so, will return SQL Query
+		 * @return int           Total Available
+		 */
+		public function count_totalavailable($debug = false) {
+			return count_totalitemavailablity($this->sessionid, $this->itemid, $debug);
 		}
 
 		/**
