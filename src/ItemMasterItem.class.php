@@ -5,7 +5,7 @@
 	/**
 	 * Class for dealing with Item Master Products / Items
 	 */
-	class ItemMasterItem extends ModelClass {
+	class ItemMasterItem {
 		use \Dplus\Base\ThrowErrorTrait;
 		use \Dplus\Base\MagicMethodTraits;
 		use \Dplus\Base\CreateFromObjectArrayTraits;
@@ -77,12 +77,16 @@
 		 * @var string
 		 */
 		protected $dummy;
+		
+		protected $innerpackqty;
+		
+		protected $outerpackqty;
 
 		/* =============================================================
 		    CRUD FUNCTIONS
 		============================================================ */
 		public static function load($itemid, $debug = false) {
-			return get_item($itemid, $debug);
+			return get_item_im($itemid, $debug);
 		}
 
 		/**
