@@ -202,6 +202,19 @@
 		public static function load($itemID, $custID = false, $vendorID = false, $debug = false) {
 			return get_xrefitem($itemID, $custID, $vendorID, $debug);
 		}
+
+		/**
+		 * Returns an object with XrefItem Class after
+		 * inputing the cross references as needed
+		 * @param  string  $itemID   Item ID / Part #
+		 * @param  mixed   $custID   Customer ID to use Cross-reference or false
+		 * @param  mixed   $vendorID Vendor ID to use Cross-reference or false
+		 * @param  bool    $debug    Run in Debug? If true, will return SQL Query
+		 * @return XRefItem          Cross Reference Item
+		 */
+		public static function load_active($itemID, $custID = false, $vendorID = false, $debug = false) {
+			return get_xrefitem_active($itemID, $custID, $vendorID, $debug);
+		}
         
         /**
          * Returns Item Description
