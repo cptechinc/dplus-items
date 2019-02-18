@@ -1,15 +1,19 @@
 <?php
-	use ProcessWire\Page;
+	/** Include / Alias Internal Libraries / Classes */
 	use Dplus\ProcessWire\DplusWire;
-	
+	use Dplus\Base\MagicMethodTraits;
+	use Dplus\Base\ThrowErrorTrait;
+	use Dplus\Base\CreateFromObjectArrayTraits;
+	use Dplus\Base\CreateClassArrayTraits;
+
 	/**
 	 * Class for dealing with Item Master Products / Items
 	 */
 	class ItemMasterItem {
-		use \Dplus\Base\ThrowErrorTrait;
-		use \Dplus\Base\MagicMethodTraits;
-		use \Dplus\Base\CreateFromObjectArrayTraits;
-		use \Dplus\Base\CreateClassArrayTraits;
+		use MagicMethodTraits;
+		use ThrowErrorTrait;
+		use CreateFromObjectArrayTraits;
+		use CreateClassArrayTraits;
 
 		/**
          * Item ID / Item Nbr
@@ -78,17 +82,21 @@
 		 */
 		protected $dummy;
 		
+		/**
+		 * Qty for Inner Pack
+		 * @var int
+		 */
 		protected $innerpackqty;
 		
+		/**
+		 * Qty for Outer Pack
+		 * @var int
+		 */
 		protected $outerpackqty;
 
-		/* =============================================================
-		    CRUD FUNCTIONS
+		/* ============================================================
+			GETTER FUNCTIONS
 		============================================================ */
-		public static function load($itemid, $debug = false) {
-			return get_item_im($itemid, $debug);
-		}
-
 		/**
          * Returns if Item is a serialized item
          * @return bool
@@ -119,5 +127,19 @@
          */
         public function is_priceonly() {
             return $this->itemtype == 'P';
-        }
+		}
+		
+		/* =============================================================
+		    CRUD FUNCTIONS
+		============================================================ */
+		/**
+		 * Returns ItemMasterItem
+		 *
+		 * @param  string         $itemid  Item ID
+		 * @param  bool           $debug   Run in Debug? If true, will return SQL Query
+		 * @return ItemMasterItem
+		 */
+		public static function load($itemid, $debug = false) {
+			return get_item_im($itemid, $debug);
+		}
 	}

@@ -1,14 +1,19 @@
 <?php
+	/** Include / Alias Internal Libraries / Classes */
 	use Dplus\ProcessWire\DplusWire;
+	use Dplus\Base\MagicMethodTraits;
+	use Dplus\Base\ThrowErrorTrait;
+	use Dplus\Base\CreateFromObjectArrayTraits;
+	use Dplus\Base\CreateClassArrayTraits;
 	
 	/**
 	 * Class for Items from the Pricing table
 	 */
 	class PricingItem {
-		use \Dplus\Base\ThrowErrorTrait;
-		use \Dplus\Base\MagicMethodTraits;
-		use \Dplus\Base\CreateFromObjectArrayTraits;
-		use \Dplus\Base\CreateClassArrayTraits;
+		use MagicMethodTraits;
+		use ThrowErrorTrait;
+		use CreateFromObjectArrayTraits;
+		use CreateClassArrayTraits;
 
 		protected $sessionid;
 		protected $recno;
@@ -186,8 +191,8 @@
 		 * Returns PricingItem from pricing table
 		 * @param  string $sessionID session ID
 		 * @param  string $itemID    Item / Part (ID/#)
-		 * @param  bool   $debug     Whether PricingItem is returned or SQL QUERY
-		 * @return PricingItem       or SQL QUERY
+		 * @param  bool   $debug     Run in Debug? If true, will return SQL Query
+		 * @return PricingItem       
 		 */
 		public static function load($sessionID, $itemID, $debug = false) {
 			return get_pricingitem($sessionID, $itemID);
