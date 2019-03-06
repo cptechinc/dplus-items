@@ -3,11 +3,12 @@
 	use Purl\Url;
 
 	/** Include / Alias Internal Libraries / Classes */
+	use Dplus\ProcessWire\DplusWire;
 	use Dplus\Base\MagicMethodTraits;
 	use Dplus\Base\ThrowErrorTrait;
 	use Dplus\Base\CreateFromObjectArrayTraits;
 	use Dplus\Base\CreateClassArrayTraits;
-
+	
 	/**
 	 * Class for Items that reside in the itemsearch table
 	 */
