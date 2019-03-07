@@ -1,8 +1,12 @@
 <?php
-	/** Include / Alias External Libraries / Classes */
+	/**
+	 * External Libraries
+	 */
 	use Purl\Url;
 
-	/** Include / Alias Internal Libraries / Classes */
+	/**
+	 * Internal Libraries
+	 */
 	use Dplus\ProcessWire\DplusWire;
 	use Dplus\Base\MagicMethodTraits;
 	use Dplus\Base\ThrowErrorTrait;

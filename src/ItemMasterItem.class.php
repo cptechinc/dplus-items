@@ -1,5 +1,7 @@
 <?php
-	/** Include / Alias Internal Libraries / Classes */
+	/**
+	 * Internal Libraries
+	 */
 	use Dplus\ProcessWire\DplusWire;
 	use Dplus\Base\MagicMethodTraits;
 	use Dplus\Base\ThrowErrorTrait;
