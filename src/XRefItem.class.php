@@ -76,7 +76,7 @@
 		 * @var string
 		 * (A)ctive | (D)elete when empty | (I)nactive
 		 */
-		protected $activestatus;
+		protected $itemstatus;
 
 		/**
 		 * Aliases that properties might use or have
@@ -95,7 +95,7 @@
 		 * @return bool
 		 */
 		public function is_active() {
-			return strtoupper($this->activestatus) == 'A' ? true : false;
+			return strtoupper($this->itemstatus) == 'A' ? true : false;
 		}
 
 		/**
